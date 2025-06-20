@@ -4,12 +4,12 @@
 
 Este projeto é um sistema de e-commerce simples baseado em arquitetura de **microsserviços**, com os seguintes serviços:
 
-- **Auth Service** – autenticação de usuários (JWT)
-- **Product Service** – gerenciamento de produtos
-- **Cart Service** – carrinho de compras
-- **Order Service** – processamento de pedidos
-- **API Gateway** – roteador central e middleware de autenticação
-- **Frontend React** – interface do usuário
+- *Auth Service* – autenticação de usuários (JWT)
+- *Product Service* – gerenciamento de produtos
+- *Cart Service* – carrinho de compras
+- *Order Service* – processamento de pedidos
+- *API Gateway* – roteador central e middleware de autenticação
+- *Frontend React* – interface do usuário
 
 ---
 
@@ -109,12 +109,12 @@ Isso irá subir todos os serviços nas seguintes portas:
 
 ## 📦 Tecnologias Utilizadas
 
-* **Backend**: FastAPI, SQLAlchemy, SQLite, JWT
-* **Frontend**: React, Axios, React Router
-* **API Gateway**: FastAPI + HTTPX
-* **Comunicação**: REST
-* **Autenticação**: JWT
-* **Ambiente**: Docker + Docker Compose
+* *Backend*: FastAPI, SQLAlchemy, SQLite, JWT
+* *Frontend*: React, Axios, React Router
+* *API Gateway*: FastAPI + HTTPX
+* *Comunicação*: REST
+* *Autenticação*: JWT
+* *Ambiente*: Docker + Docker Compose
 
 ---
 
@@ -138,13 +138,13 @@ docker-compose down           # derruba tudo
 
 ### Acessar logs de um serviço
 
-```bash
+```
 docker-compose logs -f auth-service
 ```
 
 ### Instalar dependências localmente (opcional)
 
-```bash
+```
 # Para React
 cd frontend
 npm install
