@@ -160,5 +160,3 @@ pip install -r requirements.txt
 
 Este projeto é apenas para fins educacionais.
 
-```
-
