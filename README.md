@@ -15,6 +15,8 @@ Este projeto é um sistema de e-commerce simples baseado em arquitetura de **mic
 
 ## 📁 Estrutura do Projeto
 
+---
+
 ```
 .
 ├── auth-service/
