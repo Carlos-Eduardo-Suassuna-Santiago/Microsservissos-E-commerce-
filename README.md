@@ -1,13 +1,5 @@
-Claro! O texto que você escreveu já está ótimo para um `README.md`, mas abaixo está a versão **formatada e ajustada para exibição ideal no GitHub**, com:
 
-* Emojis compatíveis
-* Links corrigidos
-* Padronização com Markdown válido
-* Código limpo para renderização perfeita
-
----
-
-````markdown
+````
 # 🛒 E-commerce com Microsserviços
 
 Este projeto é um sistema de e-commerce simples baseado em arquitetura de **microsserviços**, com os seguintes serviços:
@@ -170,12 +162,3 @@ Este projeto é apenas para fins educacionais.
 
 ```
 
----
-
-Se quiser, posso:
-- Gerar uma `cover image` para o topo do README
-- Incluir badges do GitHub (build, license, etc.)
-- Adicionar um diagrama de arquitetura
-
-Só avisar!
-```
