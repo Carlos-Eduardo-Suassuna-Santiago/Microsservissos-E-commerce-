@@ -15,7 +15,7 @@ Este projeto é um sistema de e-commerce simples baseado em arquitetura de **mic
 
 ## 📁 Estrutura do Projeto
 
-```bash
+```
 .
 ├── auth-service/
 ├── product-service/
@@ -41,7 +41,7 @@ Este projeto é um sistema de e-commerce simples baseado em arquitetura de **mic
 
 ### 1. Clone o repositório
 
-```bash
+```
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 ```
@@ -52,7 +52,7 @@ cd seu-repositorio
 
 Crie arquivos `.env` nos serviços conforme necessário. Exemplo para `auth-service`:
 
-```env
+```
 # auth-service/.env
 JWT_SECRET=segredo_super_secreto
 DATABASE_URL=sqlite:///./users.db
@@ -64,7 +64,7 @@ Crie `.env` semelhantes nos outros serviços, se aplicável.
 
 ### 3. Suba os microsserviços com Docker
 
-```bash
+```
 docker-compose up --build
 ```
 
@@ -131,7 +131,7 @@ Isso irá subir todos os serviços nas seguintes portas:
 
 ### Subir e derrubar os containers
 
-```bash
+```
 docker-compose up --build     # sobe tudo
 docker-compose down           # derruba tudo
 ```
@@ -148,6 +148,7 @@ docker-compose logs -f auth-service
 # Para React
 cd frontend
 npm install
+npm install axios react-router-dom
 
 # Para um serviço Python
 cd auth-service
