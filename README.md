@@ -1,20 +1,20 @@
-🛒 E-commerce com Microsserviços
-Este projeto é um sistema de e-commerce simples baseado em arquitetura de microsserviços, com os seguintes serviços:
 
-Auth Service – autenticação de usuários (JWT)
+## 🛒 E-commerce com Microsserviços
 
-Product Service – gerenciamento de produtos
+Este projeto é um sistema de e-commerce simples baseado em arquitetura de **microsserviços**, com os seguintes serviços:
 
-Cart Service – carrinho de compras
+* **Auth Service** – autenticação de usuários (JWT)
+* **Product Service** – gerenciamento de produtos
+* **Cart Service** – carrinho de compras
+* **Order Service** – processamento de pedidos
+* **API Gateway** – roteador central e middleware de autenticação
+* **Frontend React** – interface do usuário
 
-Order Service – processamento de pedidos
+---
 
-API Gateway – roteador central e middleware de autenticação
+## 📁 Estrutura do Projeto
 
-Frontend React – interface do usuário
-
-
-📁 Estrutura do Projeto
+```bash
 .
 ├── auth-service/
 ├── product-service/
@@ -24,32 +24,51 @@ Frontend React – interface do usuário
 ├── frontend/
 ├── docker-compose.yml
 └── README.md
+```
 
+---
 
-🚀 Pré-requisitos
-Docker
+## 🚀 Pré-requisitos
 
-Docker Compose
+* [Docker](https://www.docker.com/)
+* [Docker Compose](https://docs.docker.com/compose/)
+* (Opcional) Node.js e Python localmente, caso deseje rodar sem Docker
 
-(Opcional) Node.js e Python localmente, caso deseje rodar sem Docker
+---
 
+## 🧪 Passo a Passo para Executar
 
-🧪 Passo a Passo para Executar
-1. Clone o repositório
+### 1. Clone o repositório
+
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
+```
 
-2. Configure as variáveis de ambiente
-Crie arquivos .env nos serviços conforme necessário. Exemplo para auth-service:
+---
+
+### 2. Configure as variáveis de ambiente
+
+Crie arquivos `.env` nos serviços conforme necessário. Exemplo para `auth-service`:
+
+```env
 # auth-service/.env
 JWT_SECRET=segredo_super_secreto
 DATABASE_URL=sqlite:///./users.db
-JWT_SECRET=segredo_super_secreto
-DATABASE_URL=sqlite:///./users.db
+```
 
-3. Suba os microsserviços com Docker
+Crie `.env` semelhantes nos outros serviços, se aplicável.
+
+---
+
+### 3. Suba os microsserviços com Docker
+
+```bash
 docker-compose up --build
+```
+
 Isso irá subir todos os serviços nas seguintes portas:
+
 | Serviço         | Porta  |
 | --------------- | ------ |
 | API Gateway     | `8000` |
@@ -59,63 +78,72 @@ Isso irá subir todos os serviços nas seguintes portas:
 | Cart Service    | `8003` |
 | Order Service   | `8004` |
 
-4. Acesse a aplicação
-Frontend: http://localhost:3000
+---
 
-API Gateway: http://localhost:8000
+### 4. Acesse a aplicação
 
-5. Cadastro e Login
-Acesse /register para criar um novo usuário
+* Frontend: [http://localhost:3000](http://localhost:3000)
+* API Gateway: [http://localhost:8000](http://localhost:8000)
 
-Depois de registrar, vá para /login
+---
 
-Após login, você será redirecionado para a tela de produtos
+### 5. Cadastro e Login
 
-✅ Funcionalidades
- Registro e login com JWT
+* Acesse `/register` para criar um novo usuário
+* Depois de registrar, vá para `/login`
+* Após login, você será redirecionado para a tela de produtos
 
- Listagem de produtos
+---
 
- Adição e remoção de itens do carrinho
+## ✅ Funcionalidades
 
- Finalização de pedidos
+* [x] Registro e login com JWT
+* [x] Listagem de produtos
+* [x] Adição e remoção de itens do carrinho
+* [x] Finalização de pedidos
+* [x] Histórico de compras
+* [x] API Gateway com autenticação centralizada
 
- Histórico de compras
+---
 
- API Gateway com autenticação centralizada
+## 📦 Tecnologias utilizadas
 
-📦 Tecnologias utilizadas
-Backend: FastAPI, SQLAlchemy, SQLite, JWT
+* **Backend**: FastAPI, SQLAlchemy, SQLite, JWT
+* **Frontend**: React, Axios, React Router
+* **API Gateway**: FastAPI + HTTPX
+* **Comunicação**: REST
+* **Autenticação**: JWT
+* **Ambiente**: Docker + Docker Compose
 
-Frontend: React, Axios, React Router
+---
 
-API Gateway: FastAPI + HTTPX
+## 👨‍💻 Desenvolvimento e Contribuição
 
-Comunicação: REST
+* Utilize o GitHub Projects para acompanhar as tarefas
+* Utilize `pull requests` para colaborar
+* Código limpo e com boas práticas de microsserviços
+* Seguindo o fluxo Scrum
 
-Autenticação: JWT
+---
 
-Ambiente: Docker + Docker Compose
+## 🧹 Comandos úteis
 
-👨‍💻 Desenvolvimento e Contribuição
-Utilize o GitHub Projects para acompanhar as tarefas
+### Subir e derrubar os containers
 
-Utilize pull requests para colaborar
-
-Código limpo e com boas práticas de microsserviços
-
-Seguindo o fluxo Scrum
-
-🧹 Comandos úteis
-
-Subir e derrubar os containers
+```bash
 docker-compose up --build     # sobe tudo
 docker-compose down           # derruba tudo
-Acessar logs de um serviço
+```
 
+### Acessar logs de um serviço
+
+```bash
 docker-compose logs -f auth-service
-Instalar dependências localmente (opcional)
+```
 
+### Instalar dependências localmente (opcional)
+
+```bash
 # Para React
 cd frontend
 npm install
@@ -123,6 +151,10 @@ npm install
 # Para um serviço Python
 cd auth-service
 pip install -r requirements.txt
+```
 
-📌 Licença
+---
+
+## 📌 Licença
+
 Este projeto é apenas para fins educacionais.
